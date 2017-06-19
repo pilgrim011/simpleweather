@@ -4,7 +4,7 @@ $(document).ready(function(){
   var tempF;
   var locate = prompt("Your city?");
 
-var dodaj = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=" + locate + "&units=metric&APPID=02a3afb571841bf9ae4d3f377e67082d&callback=?";
+var dodaj = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=" + locate + "&units=metric&APPID=02a3afb571841bf9ae4d3f377e67082d&callback=?";
 
 $.getJSON(dodaj,function(response) {
   var temperature = response.main.temp;
