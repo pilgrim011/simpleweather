@@ -4,13 +4,13 @@ $(document).ready(function(){
   var tempF;
   var locate = prompt("Your city?");
 
-var dodaj = "https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?q=" + locate + "&units=metric&APPID=02a3afb571841bf9ae4d3f377e67082d&callback=?";
+var dodaj = "https://crossorigin.me/api.openweathermap.org/data/2.5/weather?q=" + locate + "&units=metric&APPID=02a3afb571841bf9ae4d3f377e67082d&callback=?";
 
 $.getJSON(dodaj,function(response) {
   var temperature = response.main.temp;
   tempC = Math.round(temperature);
   tempF = Math.round(tempC*1.8+32);
-  
+
 $("#city").html(response.name + ", " + response.sys.country);
   $("#info").html(response.main.temp);
   $(".btn").html("°C"); $("#cond").html(response.weather[0].main);
@@ -29,10 +29,10 @@ else if(toggleC==false){
   $("#info").html(tempC);
   $("button").html("°C");
 }
-   
-        
+
+
   });
-  
-  
+
+
 
   });
